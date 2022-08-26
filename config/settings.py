@@ -123,6 +123,8 @@ USE_TZ = True
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 STATIC_URL = 'static/'
 STATIC_ROOT = 'static/'
+MEDIA_URL = 'media/'
+MEDIA_ROOT = 'media/'
 
 # STATIC_ROOT = str(ROOT_DIR / "staticfiles")
 
