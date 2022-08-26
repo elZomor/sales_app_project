@@ -7,3 +7,4 @@ PyMySQL==1.0.2
 pytz==2022.2.1
 sqlparse==0.4.2
 cryptography==37.0.2
+gunicorn
