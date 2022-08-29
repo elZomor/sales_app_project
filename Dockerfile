@@ -1,6 +1,7 @@
-FROM python:3
+FROM python:3.9.3-slim
+LABEL maintainer="Development team <mohamed.elzomor@outlook.com>"
+
 WORKDIR /app
-COPY requirements.txt /app
+COPY requirements.txt .
 RUN pip install -r requirements.txt
-COPY . /app
-ENTRYPOINT ["sh", "/app/entrypoint.sh"]
+COPY . .

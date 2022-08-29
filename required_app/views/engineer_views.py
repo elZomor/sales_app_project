@@ -15,6 +15,6 @@ class EngineerViewset(ModelViewSet):
 
     @action(methods=["get"], detail=False)
     def all(self, request, *args, **kwargs):
-        x = "LOOaaaaa"
-        print("HEEO")
+        x = "fff"
+        print("HEEO", flush=True)
         return Response(data={"data": x}, status=status.HTTP_200_OK)
