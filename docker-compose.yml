@@ -1,18 +1,6 @@
 version: "3.8"
 
 services:
-#  gunicorn:
-#    container_name: "gunicorn"
-#    volumes:
-#      - static_volume:/static
-#    env_file:
-#      - .env
-#    build:
-#      context: .
-#    ports:
-#      - "9000:8000"
-#    restart: always
-
   nginx:
     container_name: web
     restart: on-failure
@@ -22,7 +10,7 @@ services:
       - static_volume:/app/static
       - media_volume:/app/media
     ports:
-      - "70:80"
+      - "80:80"
     depends_on:
       - server
 
@@ -38,9 +26,8 @@ services:
       - media_volume:/app/media
     depends_on:
       - db
-    ports:
-      - "9000:8000"
-      - "5433:5432"
+    expose:
+      - 9000
 
   db:
     container_name: database
