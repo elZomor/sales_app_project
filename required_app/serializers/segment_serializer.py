@@ -14,4 +14,4 @@ class SegmentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Segment
-        exclude = ('id', 'name',)
+        exclude = ('created_at', 'updated_at', 'parent')
