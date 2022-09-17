@@ -10,8 +10,8 @@ class SubSegmentSerializer(serializers.ModelSerializer):
 
 
 class SegmentSerializer(serializers.ModelSerializer):
-    children = SubSegmentSerializer(many=True)
+    children = SubSegmentSerializer(many=True, read_only=True)
 
     class Meta:
         model = Segment
-        exclude = ('id', 'name', 'children',)
+        exclude = ('id', 'name',)
